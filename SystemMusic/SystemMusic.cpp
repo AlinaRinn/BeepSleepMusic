@@ -2,7 +2,7 @@
 #include <Windows.h>
 
 // 40-15000 Hz Frequency, latency and pause in ms
-void sound(int freq, int latency, int pause = 0) { 
+void sound(int freq, int latency, int pause = 0) {
     Beep(freq, latency);
     Sleep(pause);
 }
@@ -12,43 +12,43 @@ void Chizick() {
         latency = 500,
         pause = 50;
 
-    sound(freq + 10, latency, pause);  // 5
-    sound(freq + 50, latency, pause);  // 9
-    sound(freq + 10, latency, pause);  // 5
-    sound(freq + 50, latency, pause);  // 9
-    sound(freq + 60, latency, pause);  // 10
-    sound(freq + 50, latency, pause);  // 9
-    sound(freq + 20, latency, pause + 1000);  // 7
+    sound(freq + 10, latency, pause); // 5
+    sound(freq + 50, latency, pause); // 9
+    sound(freq + 10, latency, pause); // 5
+    sound(freq + 50, latency, pause); // 9
+    sound(freq + 60, latency, pause); // 10
+    sound(freq + 50, latency, pause); // 9
+    sound(freq + 20, latency, pause + 1000); // 7
 
-    sound(freq + 50, latency, pause);  // 9
-    sound(freq + 20, latency, pause);  // 7
-    sound(freq + 10, latency, pause);  // 5
-    sound(freq - 10, latency, pause);  // 3
-    sound(freq + 10, latency, pause);  // 5
-    sound(freq + 10, latency, pause);  // 5
-    sound(freq + 10, latency, pause);  // 5
+    sound(freq + 50, latency, pause); // 9
+    sound(freq + 20, latency, pause); // 7
+    sound(freq + 10, latency, pause); // 5
+    sound(freq - 10, latency, pause); // 3
+    sound(freq + 10, latency, pause); // 5
+    sound(freq + 10, latency, pause); // 5
+    sound(freq + 10, latency, pause); // 5
 }
 
 void Smoke() {
     int freq = 70, // Start frequency
-        latency = 500,
-        pause = 50;
+        latency = 400,
+        pause = 0;
 
-    sound(freq + 0, latency, pause);         // 0
-    sound(freq + 30, latency, pause);        // 3
-    sound(freq + 50, latency, pause+100);    // 5
+    sound(98, latency, pause); // 0
+    sound(117, latency, pause); // 3
+    sound(131, latency, pause + 200); // 5
+    sound(98, latency, pause); // 0
 
-    sound(freq + 0, latency, pause);         // 0
-    sound(freq + 30, latency, 0);            // 3
-    sound(freq + 60, latency, 0);            // 6
-    sound(freq + 50, latency, pause + 400);  // 5
+    sound(117, latency, pause); // 3
+    sound(139, latency, pause - 100); // 6
+    sound(131, latency, pause + 400); // 5
 
-    sound(freq + 0, latency, pause);         // 0
-    sound(freq + 30, latency, pause);        // 3
-    sound(freq + 50, latency, 0);            // 5
+    sound(98, latency, pause); // 0
+    sound(117, latency, pause); // 3
+    sound(131, latency, 0); // 5
 
-    sound(freq + 30, latency, 0);            // 3
-    sound(freq + 0, latency + 200, pause);         // 0
+    sound(117, latency, 0); // 3
+    sound(98, latency + 200, pause); // 0
 }
 
 void Stroi() {
@@ -61,7 +61,7 @@ void Stroi() {
     sound(196, latency, pause); // G
     sound(147, latency, pause); // D
     sound(110, latency, pause); // A
-    sound(82, latency, pause);  // E
+    sound(82, latency, pause); // E
 
 }
 
@@ -85,13 +85,13 @@ void Small_Octa() {
         latency = 400,
         pause = 10;
 
-    sound(131, latency, pause); 
-    sound(147, latency, pause); 
+    sound(131, latency, pause);
+    sound(147, latency, pause);
     sound(165, latency, pause);
-    sound(175, latency, pause); 
-    sound(196, latency, pause); 
-    sound(220, latency, pause); 
-    sound(247, latency, pause); 
+    sound(175, latency, pause);
+    sound(196, latency, pause);
+    sound(220, latency, pause);
+    sound(247, latency, pause);
 
 }
 
@@ -126,23 +126,23 @@ void Fifth_Octa() {
 
 int main()
 {
-    Large_Octa();
-    Sleep(2000);
+    //Large_Octa();
+    //Sleep(2000);
 
-    Small_Octa();
-    Sleep(2000);
+    //Small_Octa();
+    //Sleep(2000);
 
-    First_Octa();
-    Sleep(2000);
+    //First_Octa();
+    //Sleep(2000);
 
-    Fifth_Octa();
-    Sleep(2000);
+    //Fifth_Octa();
+    //Sleep(2000);
 
-    Stroi();
-    Sleep(2000);
+    //Stroi();
+    //Sleep(2000);
 
-    Chizick();
-    Sleep(2000);
+    // Chizick();
+    // Sleep(2000);
 
     Smoke();
     Sleep(2000);

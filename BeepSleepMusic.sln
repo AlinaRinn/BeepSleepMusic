@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SystemMusic", "SystemMusic\SystemMusic.vcxproj", "{477186C7-878C-48DD-8D69-ED0D7513EA39}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SystemMusicTest", "SystemMusicTest\SystemMusicTest.vcxproj", "{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{477186C7-878C-48DD-8D69-ED0D7513EA39}.Release|x64.Build.0 = Release|x64
 		{477186C7-878C-48DD-8D69-ED0D7513EA39}.Release|x86.ActiveCfg = Release|Win32
 		{477186C7-878C-48DD-8D69-ED0D7513EA39}.Release|x86.Build.0 = Release|Win32
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Debug|x64.ActiveCfg = Debug|x64
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Debug|x64.Build.0 = Debug|x64
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Debug|x86.Build.0 = Debug|Win32
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Release|x64.ActiveCfg = Release|x64
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Release|x64.Build.0 = Release|x64
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Release|x86.ActiveCfg = Release|Win32
+		{8D988F45-CDDA-43D2-B98E-DDD0E8D16210}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

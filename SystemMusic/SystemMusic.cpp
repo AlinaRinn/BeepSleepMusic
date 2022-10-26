@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <Windows.h>
+#include <thread>
 
 // 40-15000 Hz Frequency, latency and pause in ms
 void sound(int freq, int latency, int pause = 0) {
@@ -32,7 +33,29 @@ void Chizick() {
 void Smoke() {
     int freq = 70, // Start frequency
         latency = 400,
-        pause = 0;
+        pause = 100;
+
+    sound(98, latency, pause); // 0
+    sound(117, latency, pause); // 3
+    sound(131, latency, pause + 200); // 5
+    sound(98, latency, pause); // 0
+
+    sound(117, latency, pause); // 3
+    sound(139, latency, pause - 100); // 6
+    sound(131, latency, pause + 400); // 5
+
+    sound(98, latency, pause); // 0
+    sound(117, latency, pause); // 3
+    sound(131, latency, 0); // 5
+
+    sound(117, latency, 0); // 3
+    sound(98, latency + 200, pause); // 0
+}
+
+void Smoke1() {
+    int freq = 70, // Start frequency
+        latency = 400,
+        pause = 100;
 
     sound(98, latency, pause); // 0
     sound(117, latency, pause); // 3
@@ -124,6 +147,35 @@ void Fifth_Octa() {
 
 }
 
+void anime() {
+    while (true) {
+        std::cout << "===\n"
+            << "======\n"
+            << "=========\n"
+            << "============\n"
+            << "===============\n"
+            << "==================\n"
+            << "=====================\n"
+            << "========================\n"
+            << "===========================\n"
+            << "==============================\n";
+        Sleep(1000);
+        system("cls");
+        std::cout << "                           ===\n"
+            << "                        ======\n"
+            << "                     =========\n"
+            << "                  ============\n"
+            << "               ===============\n"
+            << "            ==================\n"
+            << "         =====================\n"
+            << "      ========================\n"
+            << "   ===========================\n"
+            << "==============================\n";
+        Sleep(1000);
+        system("cls");
+    }
+}
+
 int main()
 {
     //Large_Octa();
@@ -144,7 +196,14 @@ int main()
     // Chizick();
     // Sleep(2000);
 
-    Smoke();
+
     Sleep(2000);
 
+    std::thread thr_music(Smoke);
+    //std::thread thr_music2(Smoke1);
+    std::thread thr_anime(anime);
+
+    thr_music.join();
+    //thr_music2.join();
+    thr_anime.join();
 }

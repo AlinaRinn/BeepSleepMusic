@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SystemMusicTest.cpp">
+    <ClCompile Include="ConsolePiano.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
